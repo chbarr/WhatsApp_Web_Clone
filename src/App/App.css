@@ -1,0 +1,15 @@
+.app-container {
+  width: 90%;
+  height: 95vh;
+  display: grid;
+  margin: 20px auto;
+  background-color: rebeccapurple;
+  grid-template-columns: 1fr 3fr;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}

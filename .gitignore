@@ -1,0 +1,18 @@
+# Carpeta de dependencias (node_modules)
+node_modules
+
+# Archivos de construcción
+build/
+dist/
+
+# Archivos de configuración local
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Archivos generados durante la construcción
+*.log
+
+# Ignorar la carpeta "notes" y su contenido
+/notes/
