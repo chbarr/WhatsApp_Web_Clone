@@ -34,19 +34,24 @@
 .media-buttons-container {
     margin-right: 10px;
 }
+
 .media-button:nth-child(1) {
     margin: 0;
     background-image: url("../../assets/icons/group.png");
 }
+
 .media-button:nth-child(2) {
     background-image: url("../../assets/icons/states.png");
 }
+
 .media-button:nth-child(3) {
     background-image: url("../../assets/icons/diffusions.png");
 }
+
 .media-button:nth-child(4) {
     background-image: url("../../assets/icons/diary.png");
 }
+
 .media-button:nth-child(5) {
     background-image: url("../../assets/icons/options.png");
 }

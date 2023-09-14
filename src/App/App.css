@@ -1,8 +1,9 @@
 html {
   font-size: 62.5%;
 }
+
 .app-container {
-  width: 90%;
+  width: 100%;
   height: 95vh;
   display: grid;
   margin: 20px auto;
@@ -15,4 +16,23 @@ html {
   flex-direction: column;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1274px) {
+  .app-container {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+/* Pantallas con un ancho mayor a 1024px (típicamente para escritorios) */
+@media (min-width: 1275px) {
+  .app-container {
+    width: 90%;
+  }
 }
