@@ -1,10 +1,30 @@
 import React from 'react'
+import './ProfileInfo.css'
 
 function ProfileInfo() {
     return (
-        <div>
+        <section className='profile-info'>
+            <button className='profile-pic'>
 
-        </div>
+            </button>
+
+            <div className='media-buttons-container'>
+                <button className='media-button'>
+                </button>
+
+                <button className='media-button'>
+                </button>
+
+                <button className='media-button'>
+                </button>
+
+                <button className='media-button'>
+                </button>
+
+                <button className='media-button'>
+                </button>
+            </div>
+        </section>
     )
 }
 

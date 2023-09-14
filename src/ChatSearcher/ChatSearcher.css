@@ -1,0 +1,45 @@
+.searcher-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+}
+.searcher-container-input {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 70%;
+    margin-top: 8px;
+    background-color: #202c33;
+    border-radius: 8px;
+}
+
+button {
+    width: 20px;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.searcher-container-input button{
+    background-image: url("../../assets/icons/lens.png");
+    margin: 0 10px;
+    height: 100%;
+}
+
+.searcher-container-input input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+.searcher-container > button{
+    background-image: url("../../assets/icons/pyramid.png");
+}

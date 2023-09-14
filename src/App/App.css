@@ -1,9 +1,12 @@
+html {
+  font-size: 62.5%;
+}
 .app-container {
   width: 90%;
   height: 95vh;
   display: grid;
   margin: 20px auto;
-  background-color: rebeccapurple;
+  background-color: #111b21;
   grid-template-columns: 1fr 3fr;
 }
 

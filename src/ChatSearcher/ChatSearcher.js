@@ -1,10 +1,19 @@
 import React from 'react'
-
+import './ChatSearcher.css'
 function ChatSearcher() {
     return (
-        <div>
-            Foto de perfil y chats
-        </div>
+        <section className='searcher-container'>
+            <div className='searcher-container-input'>
+                <button>
+
+                </button>
+                <input placeholder='Busca un chat o inicia uno nuevo.'>
+                </input>
+            </div>
+            <button>
+
+            </button>
+        </section>
     )
 }
 
