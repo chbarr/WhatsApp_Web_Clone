@@ -1,12 +1,16 @@
-html {
+html, body {
   font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
 }
 
 .app-container {
   width: 100%;
-  height: 95vh;
+  height: 100vh;
+  margin-top: 0px;
   display: grid;
-  margin: 20px auto;
   background-color: #111b21;
   grid-template-columns: 1fr 3fr;
 }
@@ -30,9 +34,10 @@ html {
   }
 }
 
-/* Pantallas con un ancho mayor a 1024px (típicamente para escritorios) */
 @media (min-width: 1275px) {
   .app-container {
     width: 90%;
+    height: 95vh;
+    margin: 20px auto;
   }
 }
