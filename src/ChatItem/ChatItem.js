@@ -1,16 +1,16 @@
 import React from 'react'
-
+import './ChatItem.css'
 function ChatItem(props) {
     return (
         <li className='chat-item'>
-            <button className='chat'>
+            <hr className='separator' />
+            <section className='chat'>
                 <button className='profile-picture'></button>
-                <div className='chat-content'>
-                    <h3>Pepito perez</h3>
-                    <p>El sol brilla y el día se presenta lleno de oportunidades.</p>
-                    <span>8:05 P.M</span>
-                </div>
-            </button>
+                <h3 className='person-name'>Pepito perez</h3>
+                <p className='person-message'>El sol brilla y el día se presenta lleno de oportunidades.</p>
+                <span className='person-name-time'>8:05 P.M</span>
+            </section>
+            <hr className='separator' />
         </li>
     )
 }

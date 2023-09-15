@@ -1,0 +1,64 @@
+.chat-item {
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    position: relative;
+}
+
+.chat {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin-top: 8px;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+        "profilePic personName messageTime"
+        "profilePic messageContent messageContent";
+    color: #e9edef;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    grid-area: profilePic;
+    justify-self: center;
+    background-image: url("../../assets/icons/woman.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.person-name {
+    grid-area: personName;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.person-message {
+    grid-area: messageContent;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.person-name-time {
+    grid-area: messageTime;
+    font-size: 1.3rem;
+    font-weight: 300;
+    justify-self: end;
+}
+
+.separator {
+    position: absolute;
+    right: 0;
+    width: 86%;
+    height: 1px;
+    border: none;
+    background-color: #202b32;
+}
+
+.separator:nth-child(1) {
+    top: -10px
+}

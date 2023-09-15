@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './ChatList.css'
 function ChatList(props) {
     return (
         <section className="chatList-container">
