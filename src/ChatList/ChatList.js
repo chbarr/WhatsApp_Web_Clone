@@ -1,10 +1,12 @@
 import React from 'react'
 
-function ChatList() {
+function ChatList(props) {
     return (
-        <div>
-
-        </div>
+        <section className="chatList-container">
+            <ul className="chatList">
+                {props.render()}
+            </ul>
+        </section>
     )
 }
 
