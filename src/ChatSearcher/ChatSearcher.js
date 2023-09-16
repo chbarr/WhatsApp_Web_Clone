@@ -4,9 +4,7 @@ function ChatSearcher() {
     return (
         <section className='searcher-container'>
             <div className='searcher-container-input'>
-                <button>
-
-                </button>
+                <button></button>
                 <input placeholder='Busca un chat o inicia uno nuevo.'>
                 </input>
             </div>

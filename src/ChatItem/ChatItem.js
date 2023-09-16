@@ -3,7 +3,6 @@ import './ChatItem.css'
 function ChatItem(props) {
     return (
         <li className='chat-item'>
-            <hr className='separator' />
             <section className='chat'>
                 <button className='profile-picture'></button>
                 <h3 className='person-name'>Pepito perez</h3>

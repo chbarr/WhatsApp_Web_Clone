@@ -1,5 +1,6 @@
 .chatList {
     margin-top: 0;
     list-style: none;
-    padding-left: 20px;
+    margin-left: 20px;
+    padding: 0;
 }

@@ -1,10 +1,12 @@
 import React from 'react'
-
+import './ChatArchiver.css'
 function ChatArchiver() {
     return (
-        <div>
-
-        </div>
+        <section className='archiver-container'>
+            <button ></button>
+            <span>Archivados</span>
+            <hr className='separator'/>  
+        </section>
     )
 }
 
