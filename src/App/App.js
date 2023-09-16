@@ -21,7 +21,7 @@ function App() {
             )
           } />
         </section>
-
+        <hr className='vertical-separator'/>
       </section>
     </React.Fragment>
   );

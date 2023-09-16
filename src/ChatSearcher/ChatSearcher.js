@@ -9,7 +9,6 @@ function ChatSearcher() {
                 </input>
             </div>
             <button>
-
             </button>
         </section>
     )
