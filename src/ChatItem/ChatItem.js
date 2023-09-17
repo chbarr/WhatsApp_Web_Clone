@@ -9,7 +9,9 @@ function ChatItem(props) {
                 <p className='person-message'>El sol brilla y el día se presenta lleno de oportunidades.</p>
                 <span className='person-message-time'>8:05 P.M</span>
             </section>
-            <hr className='separator' />
+            <div className='separator-container'>
+                <hr className='separator' />
+            </div>
         </li>
     )
 }
