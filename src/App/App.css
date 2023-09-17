@@ -36,19 +36,13 @@ body {
   background-color: #202b32;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 910px) and (max-width: 1450px) {
   .app-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr auto 4fr;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1274px) {
-  .app-container {
-    grid-template-columns: 2fr 3fr;
-  }
-}
-
-@media (min-width: 1275px) {
+@media (min-width: 1441px) {
   .app-container {
     width: 85%;
     height: 95vh;
