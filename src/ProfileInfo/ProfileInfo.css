@@ -19,10 +19,14 @@
     background-size: contain;
 }
 
+.media-buttons-container {
+    margin-right: 40px;
+}
+
 .media-button {
     width: 22px;
     height: 22px;
-    margin-left: 25px;
+    margin-left: 35px;
     border: none;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -31,9 +35,6 @@
     cursor: pointer;
 }
 
-.media-buttons-container {
-    margin-right: 10px;
-}
 
 .media-button:nth-child(1) {
     margin: 0;
