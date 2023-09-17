@@ -7,11 +7,11 @@ function ChatItem(props) {
                 <button className='profile-picture'></button>
                 <h3 className='person-name'>Pepito perez</h3>
                 <p className='person-message'>El sol brilla y el día se presenta lleno de oportunidades.</p>
-                <span className='person-name-time'>8:05 P.M</span>
+                <span className='person-message-time'>8:05 P.M</span>
             </section>
             <hr className='separator' />
         </li>
     )
 }
 
-export default ChatItem
+export {ChatItem}

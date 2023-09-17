@@ -5,7 +5,9 @@ function ChatArchiver() {
         <section className='archiver-container'>
             <button ></button>
             <span>Archivados</span>
-            <hr className='separator'/>  
+            <div className='separator-container'>
+                <hr className='separator' />
+            </div>
         </section>
     )
 }

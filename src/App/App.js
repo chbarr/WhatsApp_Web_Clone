@@ -3,9 +3,9 @@ import { ProfileInfo } from '../ProfileInfo/ProfileInfo.js'
 import { ChatSearcher } from '../ChatSearcher/ChatSearcher.js'
 import { ChatArchiver } from '../ChatArchiver/ChatArchiver.js'
 import { ChatList } from '../ChatList/ChatList.js'
+import { ChatItem } from '../ChatItem/ChatItem.js'
 
 import React from 'react';
-import ChatItem from '../ChatItem/ChatItem';
 
 function App() {
   return (
