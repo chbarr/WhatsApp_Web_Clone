@@ -17,7 +17,7 @@ body {
   margin-top: 0px;
   display: grid;
   background-color: #111b21;
-  grid-template-columns: 1fr auto 1.5fr;
+  grid-template-columns: 1fr auto 1.1fr;
 }
 
 .profile-container {
@@ -36,14 +36,29 @@ body {
   background-color: #202b32;
 }
 
-@media (min-width: 910px) and (max-width: 1450px) {
+@media (min-width: 900px) and (max-width: 1300px) {
   .app-container {
-    grid-template-columns: 1.5fr auto 4fr;
+    grid-template-columns: 1.5fr auto 2fr;
   }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1301px) and (max-width: 1440px) {
   .app-container {
+    grid-template-columns: 1.5fr auto 3fr;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1649px) {
+  .app-container {
+    width: 97%;
+    height: 95vh;
+    margin: 20px auto;
+  }
+}
+
+@media (min-width: 1650px) {
+  .app-container {
+    min-width: 1600px;
     width: 85%;
     height: 95vh;
     margin: 20px auto;
