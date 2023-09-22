@@ -6,8 +6,12 @@ import { ChatList } from '../ChatList/ChatList.js'
 import { ChatItem } from '../ChatItem/ChatItem.js'
 
 import React from 'react';
+import { useChats } from './useChats';
 
 function App() {
+  const {
+    chats
+  } = useChats();
   return (
     <React.Fragment>
       <section className="app-container">
@@ -15,13 +19,16 @@ function App() {
           <ProfileInfo />
           <ChatSearcher />
           <ChatArchiver />
-          <ChatList render={
-            () => (
-              <ChatItem />
-            )
-          } />
+          <ChatList
+            chats={chats}
+            render={
+              () => todo => (
+                <ChatItem />
+              )
+            }
+          />
         </section>
-        <hr className='vertical-separator'/>
+        <hr className='vertical-separator' />
       </section>
     </React.Fragment>
   );

@@ -4,7 +4,7 @@ function ChatList(props) {
     return (
         <section className="chatList-container">
             <ul className="chatList">
-                {props.render()}
+                {props.chats.map(props.render())}
             </ul>
         </section>
     )
