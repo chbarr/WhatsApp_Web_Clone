@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.chat-item:hover{
+    background-color: #202c33; 
+}
+
 .chat {
     display: grid;
     width: 100%;

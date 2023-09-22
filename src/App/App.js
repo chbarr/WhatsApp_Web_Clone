@@ -10,20 +10,28 @@ import { useChats } from './useChats';
 
 function App() {
   const {
-    chats
+    chats,
+    searchValue,
+    setSearchValue,
+    searchedChats
   } = useChats();
   return (
     <React.Fragment>
       <section className="app-container">
         <section className="profile-container">
           <ProfileInfo />
-          <ChatSearcher />
+          <ChatSearcher searchValue={searchValue} setSearchValue={setSearchValue}/>
           <ChatArchiver />
           <ChatList
-            chats={chats}
+            chats={searchedChats}
             render={
-              () => todo => (
-                <ChatItem />
+              () => chat => (
+                <ChatItem
+                  key={chat.id}
+                  chatName={chat.chatName}
+                  receivedMessages={chat.receivedMessages}
+                  sendMessages={chat.sendMessages}
+                />
               )
             }
           />

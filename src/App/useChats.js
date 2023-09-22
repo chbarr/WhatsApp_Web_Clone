@@ -6,11 +6,19 @@ function useChats() {
         item: chats
     } = useLocalStorge('chats', []);
 
+    const [searchValue, setSearchValue] = React.useState('');
+    const searchedChats = chats.filter(chat =>
+        chat.chatName.toLocaleLowerCase().
+            includes(searchValue.toLocaleLowerCase()));
+
     console.log('Valor de chats en useChats:', chats);
 
     return (
         {
-            chats
+            chats,
+            searchValue,
+            setSearchValue,
+            searchedChats
         }
     );
 }
