@@ -9,18 +9,22 @@ import React from 'react';
 import { useChats } from './useChats';
 
 function App() {
+  
   const {
     chats,
     searchValue,
+    searchedChats,
+    selectedChat,
     setSearchValue,
-    searchedChats
+    setSelectedChat
   } = useChats();
+
   return (
     <React.Fragment>
       <section className="app-container">
         <section className="profile-container">
           <ProfileInfo />
-          <ChatSearcher searchValue={searchValue} setSearchValue={setSearchValue}/>
+          <ChatSearcher searchValue={searchValue} setSearchValue={setSearchValue} />
           <ChatArchiver />
           <ChatList
             chats={searchedChats}
@@ -28,9 +32,8 @@ function App() {
               () => chat => (
                 <ChatItem
                   key={chat.id}
-                  chatName={chat.chatName}
-                  receivedMessages={chat.receivedMessages}
-                  sendMessages={chat.sendMessages}
+                  chat={chat}
+                  setSelectedChat={setSelectedChat}
                 />
               )
             }

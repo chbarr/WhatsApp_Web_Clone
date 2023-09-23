@@ -2,10 +2,14 @@ import React from 'react'
 import './ChatItem.css'
 function ChatItem(props) {
     return (
-        <li className='chat-item'>
+        <li className='chat-item'
+        onClick={() =>{
+            props.setSelectedChat(props.chat.id);
+            console.log('selectedChat: ' + props.chat.id);
+        }}>
             <section className='chat'>
                 <button className='profile-picture'></button>
-                <h3 className='person-name'>{props.chatName}</h3>
+                <h3 className='person-name'>{props.chat.chatName}</h3>
                 <p className='person-message'>El sol brilla y el día se presenta lleno de oportunidades.</p>
                 <span className='person-message-time'>8:05 P.M</span>
             </section>

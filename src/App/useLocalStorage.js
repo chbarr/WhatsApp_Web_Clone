@@ -1,13 +1,22 @@
-import React from 'react';
+import React from 'react'
+import { useState, useEffect } from 'react';
 
-function useLocalStorge(itemName, initialValue) {
-    const [state, dispatch] = React.useReducer(reducer, initialState({ initialValue }));
+
+function useLocalStorage(itemName, initialValue) {
+
+    const initialState = {
+        item: initialValue,
+        loading: true,
+        error: false
+    }
+
+    const [state, dispatch] = React.useReducer(reducer, initialState);
+
     const {
         item,
         loading,
         error
     } = state;
-    console.log('state', state);
 
     //Action creators
     const onError = (error) => {
@@ -15,33 +24,33 @@ function useLocalStorge(itemName, initialValue) {
     }
 
     const onSuccess = (parsedItem) => {
-        //console.log('on success!!: ' + JSON.stringify(parsedItem));
         dispatch({ type: actionTypes.success, payload: parsedItem });
     }
 
-    React.useEffect(
-        () => {
-            setTimeout(
-                () => {
-                    try {
-                        const localStorageItem = localStorage.getItem(itemName);
-                        let parsedItem = localStorageItem ? JSON.parse(localStorageItem) : initialValue;
-                        console.log('parsedItem: ' + JSON.parse(localStorageItem))
-                        onSuccess(parsedItem);
-                    } catch (error) {
-                        console.log('on errorr' + error)
-                        onError(error);
-                    }
-                }, 700
-            )
-        }, []
-    );
+    useEffect(() => {
+        const fetchDataFromLocalStorage = () => {
+            try {
+                const localStorageItem = localStorage.getItem('chats');
+                if (localStorageItem) {
+                    const parsedItem = JSON.parse(localStorageItem);
+                    onSuccess(parsedItem);
+                }
+            } catch (error) {
+                onError(error);
+            }
+        };
+        
+        if (loading) {
+            const timer = setTimeout(() => {
+                console.log("buscando datos del localStorage");
+                fetchDataFromLocalStorage();
+            }, 700);
+            return () => clearTimeout(timer); // Limpia el temporizador en la desinstalación del componente
+        }
 
-    return {
-        item,
-        loading,
-        error
-    };
+    }, [loading]);
+
+    return { item, loading, error };
 }
 
 const initialState = ({ initialValue }) => ({
@@ -70,4 +79,4 @@ const reducerObject = (state, payload) => ({
 
 const reducer = (state, action) => reducerObject(state, action.payload)[action.type];
 
-export { useLocalStorge }
+export { useLocalStorage }
