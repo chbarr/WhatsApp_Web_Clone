@@ -12,8 +12,6 @@ function useChats() {
         chat.chatName.toLocaleLowerCase().
             includes(searchValue.toLocaleLowerCase()));
 
-    //console.log('Valor de chats en useChats:', chats);
-
     return (
         {
             chats,
