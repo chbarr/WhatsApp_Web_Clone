@@ -30,7 +30,7 @@ function useLocalStorage(itemName, initialValue) {
     useEffect(() => {
         const fetchDataFromLocalStorage = () => {
             try {
-                const localStorageItem = localStorage.getItem('chats');
+                const localStorageItem = localStorage.getItem(itemName);
                 if (localStorageItem) {
                     const parsedItem = JSON.parse(localStorageItem);
                     onSuccess(parsedItem);

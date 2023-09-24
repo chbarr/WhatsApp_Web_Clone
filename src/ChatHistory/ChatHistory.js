@@ -1,13 +1,20 @@
 import React from 'react'
-
+import facetimeIcon from '../assets/icons/facetime.png';
+import arrowIcon from '../assets/icons/arrow.png';
+import "./ChatHistory.css"
 function ChatHistory(props) {
-    return (    
+    return (
         <section className='chatHistoryContainer'>
-            <section className='chatHeader'> 
-                <button></button>
-                <h3></h3>
-                <div>
+            <section className='chatHeader'>
+                <div className='personInfoContainer'>
                     <button></button>
+                    <h3>{props.chat.chatName}</h3>
+                </div>
+                <div className='optionsContainer'>
+                    <div className='faceTimeButton'>
+                        <img alt='facetime icon' src={facetimeIcon} />
+                        <img alt='arrow icon' src={arrowIcon} />
+                    </div>
                     <button></button>
                     <button></button>
                 </div>

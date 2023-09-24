@@ -7,7 +7,7 @@ function useChats() {
     } = useLocalStorage('chats', []);
 
     const [searchValue, setSearchValue] = React.useState('');
-    const [selectedChat, setSelectedChat] = React.useState(0);
+    const [selectedChatId, setSelectedChatId] = React.useState(0);
     const searchedChats = chats.filter(chat =>
         chat.chatName.toLocaleLowerCase().
             includes(searchValue.toLocaleLowerCase()));
@@ -19,9 +19,9 @@ function useChats() {
             chats,
             searchValue,
             searchedChats,
-            selectedChat,
+            selectedChatId,
             setSearchValue,
-            setSelectedChat
+            setSelectedChatId
         }
     );
 }

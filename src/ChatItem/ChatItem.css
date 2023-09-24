@@ -28,7 +28,7 @@
     height: 50px;
     margin-right: 10px;
     grid-area: profilePic;
-    background-image: url("../../assets/icons/woman.png");
+    background-image: url("../assets/icons/woman.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

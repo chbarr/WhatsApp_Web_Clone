@@ -7,17 +7,20 @@ import { ChatItem } from '../ChatItem/ChatItem.js'
 
 import React from 'react';
 import { useChats } from './useChats';
+import ChatHistory from '../ChatHistory/ChatHistory';
 
 function App() {
-  
+
   const {
     chats,
     searchValue,
     searchedChats,
-    selectedChat,
+    selectedChatId,
     setSearchValue,
-    setSelectedChat
+    setSelectedChatId
   } = useChats();
+
+  const selectedChat = chats.filter(chat => chat.id === selectedChatId)[0];
 
   return (
     <React.Fragment>
@@ -33,13 +36,17 @@ function App() {
                 <ChatItem
                   key={chat.id}
                   chat={chat}
-                  setSelectedChat={setSelectedChat}
+                  setSelectedChatId={setSelectedChatId}
                 />
               )
             }
           />
         </section>
         <hr className='vertical-separator' />
+        {selectedChatId !== 0 &&
+          <ChatHistory
+            chat={selectedChat}>
+          </ChatHistory>}
       </section>
     </React.Fragment>
   );

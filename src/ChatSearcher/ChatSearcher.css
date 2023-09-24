@@ -26,7 +26,7 @@ button {
 }
 
 .searcher-container-input button{
-    background-image: url("../../assets/icons/lens.png");
+    background-image: url("../assets/icons/lens.png");
     margin: 0 10px;
     height: 100%;
 }
@@ -46,5 +46,5 @@ button {
 }
 
 .searcher-container > button{
-    background-image: url("../../assets/icons/pyramid.png");
+    background-image: url("../assets/icons/pyramid.png");
 }

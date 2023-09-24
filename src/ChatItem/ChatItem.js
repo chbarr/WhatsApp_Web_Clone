@@ -4,8 +4,7 @@ function ChatItem(props) {
     return (
         <li className='chat-item'
         onClick={() =>{
-            props.setSelectedChat(props.chat.id);
-            console.log('selectedChat: ' + props.chat.id);
+            props.setSelectedChatId(props.chat.id);
         }}>
             <section className='chat'>
                 <button className='profile-picture'></button>
