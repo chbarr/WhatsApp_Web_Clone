@@ -1,7 +1,6 @@
 import React from 'react'
 
-function useChatHistory(sendMessages, receivedMessages) {
-    const chatMessages = [...sendMessages, ...receivedMessages];
+function useChatHistory(chatMessages) {
     return chatMessages.sort(compareHours); 
 }
 
