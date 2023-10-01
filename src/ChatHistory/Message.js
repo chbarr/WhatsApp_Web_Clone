@@ -1,10 +1,10 @@
 import React from 'react'
-
-function Message() {
+import './Message.css'
+function Message(props) {
     return (
-        <div className='messageContainer'>
-            <p className='messageContent'></p>
-            <span className='messageHour'></span>
+        <div className='messageContainer sendMessage'>
+            <p className='messageContent'>{props.messageContent}</p>
+            <span className='messageHour'>{props.messageHour}</span>
         </div>
     )
 }

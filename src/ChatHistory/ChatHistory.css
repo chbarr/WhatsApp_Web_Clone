@@ -38,7 +38,7 @@
     font-size: 1.5rem;
 }
 
-.optionsContainer{
+.optionsContainer {
     width: 150px;
     justify-content: space-between;
 }
@@ -69,4 +69,11 @@
     width: 20px;
     height: 20px;
     background-image: url("../assets/icons/options.png");
+}
+
+.chatMessages {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 25px;
 }

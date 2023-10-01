@@ -1,0 +1,38 @@
+.messageContainer {
+    position: relative;
+    padding: 3px 8px;
+    box-sizing: border-box;
+    width: fit-content;
+    min-width: 110px;
+    max-width: 400px;
+    min-height: 38px;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.receivedMessage {
+    background-color: #202c33;
+    align-self: flex-start;
+}
+
+.sendMessage {
+    background-color: #005c4b;
+    align-self: flex-end;
+}
+
+.messageContent {
+    margin: 0;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    color: #e9edef;
+}
+
+.messageHour {
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    font-size: 1.1rem;
+    color: #a6abad;
+}

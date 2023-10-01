@@ -2,6 +2,7 @@ import React from 'react'
 import facetimeIcon from '../assets/icons/facetime.png';
 import arrowIcon from '../assets/icons/arrow.png';
 import "./ChatHistory.css"
+import Message from './Message';
 function ChatHistory(props) {
     return (
         <section className='chatHistoryContainer'>
@@ -18,6 +19,17 @@ function ChatHistory(props) {
                     <button></button>
                     <button></button>
                 </div>
+            </section>
+            <section className='chatMessages'>
+                <Message
+                    messageContent={'Hola hola hola holaaaa'}
+                    messageHour={"09:05 AM"}
+                />
+
+                <Message
+                    messageContent={'Hola hola hola hola'}
+                    messageHour={"09:05 AM"}
+                />
             </section>
         </section>
     )
