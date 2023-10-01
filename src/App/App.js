@@ -7,7 +7,8 @@ import { ChatItem } from '../ChatItem/ChatItem.js'
 
 import React from 'react';
 import { useChats } from './useChats';
-import ChatHistory from '../ChatHistory/ChatHistory';
+import { ChatHistory } from '../ChatHistory/ChatHistory';
+import { ChatMessage } from '../ChatHistory/ChatMessage';
 
 function App() {
 
@@ -45,7 +46,18 @@ function App() {
         <hr className='vertical-separator' />
         {selectedChatId !== 0 &&
           <ChatHistory
-            chat={selectedChat}>
+            chat={selectedChat}
+            render={
+              () => message => (
+                <ChatMessage
+                  key={message.messageId}
+                  messageContent={message.content}
+                  messageHour={message.sendHour}
+                  isOwnMessage={message.isOwnMessage}
+                />
+              )
+            }
+          >
           </ChatHistory>}
       </section>
     </React.Fragment>

@@ -1,12 +1,12 @@
 import React from 'react'
-import './Message.css'
-function Message(props) {
+import './ChatMessage.css'
+function ChatMessage(props) {
     return (
-        <div className='messageContainer'>
+        <div className={`messageContainer ${props.isOwnMessage ? 'sendMessage' : 'receivedMessage'}`}>
             <p className='messageContent'>{props.messageContent}</p>
             <span className='messageHour'>{props.messageHour}</span>
         </div>
     )
 }
 
-export default Message
+export { ChatMessage }

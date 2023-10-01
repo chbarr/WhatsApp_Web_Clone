@@ -3,9 +3,9 @@ import './ChatItem.css'
 function ChatItem(props) {
     return (
         <li className='chat-item'
-        onClick={() =>{
-            props.setSelectedChatId(props.chat.id);
-        }}>
+            onClick={() => {
+                props.setSelectedChatId(props.chat.id);
+            }}>
             <section className='chat'>
                 <button className='profile-picture'></button>
                 <h3 className='person-name'>{props.chat.chatName}</h3>
