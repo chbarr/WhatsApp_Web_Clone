@@ -5,7 +5,6 @@ import "./ChatHistory.css"
 import { ChatMessage } from './ChatMessage';
 import { useChatHistory } from './useChatHistory';
 function ChatHistory(props) {
-    console.log('entrando a ChatHistory')
     const chatMessages = useChatHistory(props.chat.chatMessages);
 
     return (
